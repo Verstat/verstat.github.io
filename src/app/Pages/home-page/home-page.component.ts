@@ -5,13 +5,14 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <div class="lg:h-96 sm:h-48 flex items-center justify-center">
+    <div class="lg:h-max sm:h-48 flex items-center justify-center mt-8">
       <div class="max-w-2xl w-full px-4">
         <h1 class="text-4xl font-bold text-center lg:mb-8 sm:mb-2 text-black">
-          Coming Soon!
+          Website is coming soon!
         </h1>
         <p class="text-lg text-gray-700 text-center lg:mb-12 sm:mb-6">
-          Our website is under construction. We'll be back soon!
+          Our website is under construction, but we are happy to offer you our
+          services
         </p>
         <form
           class="flex flex-col md:flex-row justify-center items-center gap-4"
@@ -27,6 +28,9 @@ import { Component } from '@angular/core';
             Notify Me
           </button>
         </form>
+        <p class="text-xl  text-gray-700 text-center lg:mt-12 sm:mt-6">
+          Please find our capabilities below
+        </p>
       </div>
     </div>
   `,
