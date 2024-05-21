@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-home-header',
@@ -15,7 +16,9 @@ import { NgOptimizedImage } from '@angular/common';
           >
             <div class="sm:hidden block">
               <img
-                src="/assets/img/logo/Full-Logo-2-Colour-3_FNL.svg"
+                [ngSrc]="
+                  baseUrl + '/assets/img/logo/Full-Logo-2-Colour-3_FNL.svg'
+                "
                 priority
                 width="200"
                 height="200"
@@ -25,7 +28,10 @@ import { NgOptimizedImage } from '@angular/common';
             </div>
             <div class="sm:block hidden">
               <img
-                src="/assets/img/logo/Horizontal-Logo-1-2-Colour-3_FNL.svg"
+                [ngSrc]="
+                  baseUrl +
+                  '/assets/img/logo/Horizontal-Logo-1-2-Colour-3_FNL.svg'
+                "
                 priority
                 width="500"
                 height="500"
@@ -41,6 +47,6 @@ import { NgOptimizedImage } from '@angular/common';
   styles: ``,
 })
 export class HomeHeaderComponent implements OnInit {
-  isSmall: boolean = false;
+  baseUrl: string = environment.baseUrl;
   ngOnInit() {}
 }
