@@ -16,19 +16,25 @@ import { IEmail } from '../../models/email';
   imports: [ReactiveFormsModule, HttpClientModule, CommonModule],
   providers: [],
   template: `
-    <div class="lg:h-max sm:h-48 flex items-center justify-center mt-8">
-      <div class="max-w-2xl w-full px-4">
-        <h1 class="text-4xl font-bold text-center lg:mb-8 sm:mb-2 text-black">
+    <div
+      class="lg:h-max md:h-60 sm:h-48 flex items-center justify-center sm:mt-10 md:mt-12 mb-6"
+    >
+      <div class="max-w-4xl w-full px-4">
+        <h1
+          class="lg:text-5xl sm:text-4xl text-3xl  font-bold text-center lg:mb-8 sm:mb-2 text-black"
+        >
           Website is coming soon!
         </h1>
-        <p class="text-lg text-gray-700 text-center lg:mb-12 sm:mb-6">
+        <p
+          class="lg:text-2xl md:text-xl text-lg text-gray-700 text-center lg:mb-12 sm:mb-6"
+        >
           Our website is under construction, but we are happy to offer you our
           services
         </p>
         <form
           [formGroup]="emailForm"
           (ngSubmit)="onSubmit()"
-          class="flex flex-col md:flex-row justify-center items-start gap-4"
+          class="flex flex-col md:flex-row justify-center items-center gap-4 p-8"
         >
           <div>
             <input
@@ -36,7 +42,8 @@ import { IEmail } from '../../models/email';
               type="email"
               id="success"
               placeholder="Enter your email address"
-              class="w-full md:w-80 py-2 px-4 rounded-lg border-2 border-black"
+              class="w-full md:w-80 md:py-3 md:px-5 rounded-lg border-2 border-black 
+              py-2 px-3.5"
               (input)="onChanged()"
               [ngClass]="{
                 'bg-green-50 border-green-500 text-green-900 placeholder-green-700 focus:ring-green-500 focus:border-green-500':
@@ -49,7 +56,7 @@ import { IEmail } from '../../models/email';
             />
             <div
               *ngIf="(emailForm.touched && emailForm.invalid) || notification"
-              class="text-red-500 mt-2 text-left pl-4"
+              class="text-red-500 mt-2 text-left pl-4 md:text-lg"
             >
               <p *ngIf="emailForm.controls['email'].errors?.['required']">
                 Email is required.
@@ -70,7 +77,10 @@ import { IEmail } from '../../models/email';
               'bg-gray-700 hover:bg-gray-800':
                 emailForm.invalid && emailForm.controls['email'].touched
             }"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center"
+            class="text-white font-medium md:text-lg
+            rounded-lg md:px-7 py-3 px-5 text-center me-2 inline-flex items-center
+            bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 
+            dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             @if(loading){
             <svg
@@ -93,14 +103,15 @@ import { IEmail } from '../../models/email';
             Loading... } @else { Notify Me }
           </button>
         </form>
-        <p class="text-xl text-gray-700 text-center lg:mt-12 sm:mt-6">
+        <p
+          class="lg:text-2xl md:text-xl text-lg text-gray-700 text-center lg:mt-12 sm:mt-6"
+        >
           Please find our capabilities below
         </p>
       </div>
     </div>
   `,
   styles: `
-    
   `,
 })
 export class HomePageComponent {
