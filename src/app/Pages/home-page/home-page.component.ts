@@ -34,7 +34,7 @@ import { IEmail } from '../../models/email';
         <form
           [formGroup]="emailForm"
           (ngSubmit)="onSubmit()"
-          class="flex flex-col md:flex-row justify-center items-center gap-4 p-8"
+          class="flex flex-col md:flex-row justify-center md:items-start items-center gap-4 p-8"
         >
           <div>
             <input
