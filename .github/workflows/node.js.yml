@@ -29,10 +29,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
 
-      - name: Variables
-        run: |
-          cat ${FIREBASE_API_KEY}
-
       - name: Update environment variables
         run: |
           sed -i 's/apiKey.*/apiKey: "${{ vars.FIREBASE_API_KEY }}",/' src/environments/environment.prod.ts
