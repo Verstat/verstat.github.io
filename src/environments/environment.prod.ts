@@ -1,12 +1,13 @@
 export const environment = {
   production: true,
   firebaseConfig: {
-    apiKey: process.env['FIREBASE_API_KEY'],
-    authDomain: process.env['FIREBASE_AUTH_DOMAIN'],
-    databaseURL: process.env['FIREBASE_DATABASE_URL'],
-    projectId: process.env['FIREBASE_PROJECT_ID'],
-    storageBucket: process.env['FIREBASE_STORAGE_BUCKET'],
-    messagingSenderId: process.env['FIREBASE_MESSAGING_SENDER_ID'],
-    appId: process.env['FIREBASE_APP_ID'],
+    apiKey: 'AIzaSyBMwek10IVBk2hPwyQ63OBosSlPZsknXbk',
+    authDomain: 'verstat-d9615.firebaseapp.com',
+    databaseURL:
+      'https://verstat-d9615-default-rtdb.europe-west1.firebasedatabase.app',
+    projectId: 'verstat-d9615',
+    storageBucket: 'verstat-d9615.appspot.com',
+    messagingSenderId: '1053625821073',
+    appId: '1:1053625821073:web:c17ddb6fd381cd53dd1c30',
   },
 };
