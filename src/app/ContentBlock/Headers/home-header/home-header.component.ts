@@ -9,16 +9,14 @@ import { environment } from '../../../../environments/environment';
   imports: [RouterLink, NgOptimizedImage],
   template: `
     <header>
-      <div class="flex items-center justify-center w-full h-auto">
+      <div class="flex items-center justify-center w-full h-32 ">
         <a routerLink="/" class="flex items-center">
           <div
             class="overflow-hidden sm:h-24 h-32 w-full flex items-start justify-center"
           >
             <div class="sm:hidden block">
               <img
-                [ngSrc]="
-                  baseUrl + '/assets/img/logo/Full-Logo-2-Colour-3_FNL.svg'
-                "
+                [ngSrc]="'/assets/img/logo/Full-Logo-2-Colour-3_FNL.svg'"
                 priority
                 width="200"
                 height="200"
@@ -29,7 +27,6 @@ import { environment } from '../../../../environments/environment';
             <div class="sm:block hidden">
               <img
                 [ngSrc]="
-                  baseUrl +
                   '/assets/img/logo/Horizontal-Logo-1-2-Colour-3_FNL.svg'
                 "
                 priority
@@ -47,6 +44,5 @@ import { environment } from '../../../../environments/environment';
   styles: ``,
 })
 export class HomeHeaderComponent implements OnInit {
-  baseUrl: string = environment.baseUrl;
   ngOnInit() {}
 }
