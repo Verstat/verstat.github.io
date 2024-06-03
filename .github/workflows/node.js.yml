@@ -38,7 +38,7 @@ jobs:
           echo "FIREBASE_API_KEY: ${FIREBASE_API_KEY}"
           echo "FIREBASE_API_KEY: ${{ vars.FIREBASE_API_KEY }}"
           
-          sed -i 's/apiKey.*/apiKey: ${FIREBASE_API_KEY},/' src/environments/environment.prod.ts
+          sed -i 's/apiKey.*/apiKey: "${{ vars.FIREBASE_API_KEY }}",/' src/environments/environment.prod.ts
           sed -i 's/authDomain.*/authDomain: \"${FIREBASE_AUTH_DOMAIN}\",/' src/environments/environment.prod.ts
           sed -i 's/databaseURL.*/databaseURL: \"${FIREBASE_DATABASE_URL}\",/' src/environments/environment.prod.ts
           sed -i 's/projectId.*/projectId: \"${FIREBASE_PROJECT_ID}\",/' src/environments/environment.prod.ts
