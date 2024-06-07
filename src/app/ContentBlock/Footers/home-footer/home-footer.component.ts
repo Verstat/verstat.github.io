@@ -103,9 +103,9 @@ import { MailtoService } from '../../../Services/mailto.service';
   `,
 })
 export class HomeFooterComponent implements OnInit {
-  recipient: string = 'info@example.com';
-  subject: string = 'Feedback';
-  body: string = 'I would like to give feedback...';
+  recipient: string = 'a.stremovskyy@verstat.ca';
+  subject: string = '';
+  body: string = '';
   mailtoUrl: string = '';
 
   constructor(private mailtoService: MailtoService) {}
